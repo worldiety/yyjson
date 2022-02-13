@@ -1,0 +1,13 @@
+prefix=${pcfiledir}/../..
+exec_prefix=${prefix}
+includedir=${prefix}/include
+
+Name: yyson
+Version: 0.4.0
+Description: JSON library
+
+Libs: -L${prefix}/lib -l:wdyyyson.so
+Cflags: -I${includedir}
+
+Requires:
+

@@ -6,6 +6,12 @@ cmake_minimum_required(VERSION 3.5)
 project(yyjson VERSION 0.4.0)
 
 
+####################### worldiety
+# Set library prefix to "wdy" to avoid clashing with system libs on (older) android devices, install simple pc-file
+set(CMAKE_SHARED_LIBRARY_PREFIX wdy)
+install(FILES yyson.pc DESTINATION lib/pkgconfig)
+#######################
+
 # ------------------------------------------------------------------------------
 # Compile Options, see yyjson.h for more explanation.
 option(YYJSON_DISABLE_READER "Disable JSON reader" OFF)
